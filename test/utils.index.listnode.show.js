@@ -2,4 +2,4 @@ const {createListFromArr}  = require('../utils')
 
 const head = createListFromArr([2,3,4]);
 
-console.log(head.show());
+console.log(head.toArr());

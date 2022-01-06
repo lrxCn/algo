@@ -4,7 +4,7 @@ class ListNode{
     this.next = next;
   }
 
-  show(){
+  toArr(){
     let p = new ListNode('', this);
     const res = [];
     while(p = p.next){
