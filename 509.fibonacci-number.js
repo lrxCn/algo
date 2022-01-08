@@ -10,17 +10,14 @@
  * @return {number}
  */
 var fib = function(n) {
-   if(n === 0 || n === 1){
+  if(n === 0 || n === 1){
     return n;
-   }
-   
-   let first = 0, second = 1;
-
-   for(let i = 1 ; i < n ; i++){
+  }  
+  let [first, second] = [0, 1];
+  for(let i = 1; i< n; i++){
     [first, second] = [second, first + second]
-   }
-
-   return second
+  }
+  return second
 };
 // @lc code=end
 

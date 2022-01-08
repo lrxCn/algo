@@ -13,9 +13,10 @@
  * }
  */
 
- var findNthFromEnd = function(head, n) {
+const findNthFromEnd = function(head, n){
   let p1 = head, p2 = head;
-  for(let i = 0 ; i < n ; i++){
+
+  for(let i = 0; i < n; i++){
     p1 = p1.next;
   }
 
@@ -24,8 +25,9 @@
     p2 = p2.next;
   }
 
-  return p2
-};
+  return p2;
+
+}
 
 /**
  * @param {ListNode} head
@@ -33,13 +35,11 @@
  * @return {ListNode}
  */
 var removeNthFromEnd = function(head, n) {
-    const dummy = new ListNode(-1, head);
+  const dummy = new ListNode(-1, head);
 
-    const prev = findNthFromEnd(dummy, n + 1);
-
-    prev.next = prev.next.next;
-    
-    return dummy.next;
+  const prev = findNthFromEnd(dummy, n+1);
+  prev.next = prev.next.next;
+  return dummy.next;
 };
 // @lc code=end
 
